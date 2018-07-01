@@ -1,0 +1,64 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "ABAPForHANA\n\n\nMaterial de treinamento de ABAP For HANA",
+            "title": "Home"
+        },
+        {
+            "location": "/#abapforhana",
+            "text": "Material de treinamento de ABAP For HANA",
+            "title": "ABAPForHANA"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/",
+            "text": "Pr\u00e9-Requisitos\n\n\n\u00a0\n\n\nInstala\u00e7\u00e3o do SAP GUI 7.5\n\n\n\u00a0\n\n\nDurante o processo de instala\u00e7\u00e3o dos arquivos abaixo, atente-se \u00e0 vers\u00e3o do seu sistema operacional, se \u00e9 32 ou 64 bits. \n\n\n\u00a0\n\n\nWindows\n\n\n\u00a0\n\n\nBaixar o SAP GUI 7.5 e os patchs mais recentes no SAP ONE Support (necess\u00e1rio S-User com permiss\u00e3o), ou baixar no link abaixo do Google Drive. \n\n\nSAP GUI 7.5\n\n\nInstale na ordem o SAP GUI 7.5, o \u00faltimo patch (Patch 6) e os hotfix liberados para o patch instalado (Patch 6 Hotfix 1). \n\n\n\u00a0\n\n\n\u00a0\n\n\n\u00a0\n\n\nInstala\u00e7\u00e3o do JAVA 8 JDK\n\n\n\u00a0\n\n\n\u00a0\n\n\nWindows\n\n\n\u00a0\n\n\nAcesse o site da Oracle e instale o \nJava JDK 8\n (instalar o update mais recente, desde que seja Java 8. Atentar ao fato que \u00e9 preciso instalar o JDK e n\u00e3o o JRE, e o Java precisa estar na vers\u00e3o 8 (vers\u00f5es anteriores n\u00e3o servem).\n\n\nAp\u00f3s a instala\u00e7\u00e3o, verifique se existe a vari\u00e1vel de sistema JAVA_HOME e se ela est\u00e1 apontando para o diret\u00f3rio de instala\u00e7\u00e3o do seu Java JDK.\n\n\n\u00a0\n\n\n\n\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\nInstala\u00e7\u00e3o do Eclipse\n\n\n\u00a0\n\n\nPara instala\u00e7\u00e3o do Eclipse \u00e9 preciso ter o JAVA instalado previamente.\n\n\n\u00a0\n\n\nWindows\n\n\n\u00a0\n\n\nAcesse o site do \nEclipse\n e fa\u00e7a download do \nEclipse Oxygen 4.7\n\n\nInstale a op\u00e7\u00e3o \"Eclipse IDE for Java Developers\"\n\n\n\u00a0\n\n\n\u00a0\n\n\n\u00a0\n\n\nInstala\u00e7\u00e3o do ADT (ABAP Development Tools)\n\n\n\u00a0\n\n\n\u00a0\n\n\nWindows\n\n\n\u00a0\n\n\nOs passos a seguir est\u00e3o descritos no site \nSAP Development Tools ABAP\n para instalar o plugin ADT (ABAP Development Tools) no Eclipse Oxygen.\n\n\n\n\n\n\nAbra o Eclipse Oxygen; \n\n\n\n\n\n\nV\u00e1 em \nHelp>Install New Software..\n;\n\n\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\nAdicione o reposit\u00f3rio \nhttps://tools.hana.ondemand.com/oxygen\n e pressione \nEnter\n;\n\n\n\n\n\u00a0\n\n\n\n\n\n\n\u00a0\n\n\n\n\nMarque as op\u00e7\u00f5es \nABAP Development Tools\n e \nSAP HANA Tools\n e clique em \nNext\n;\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\nClique novamente em \nNext\n, aceite os termos de licen\u00e7a e clique em \nFinish\n;\n\n\n\n\n\u00a0\n\n\n\n\n\u00a0\n\n\n\n\nO Eclipse vai come\u00e7ar a baixar e instalar os Plugins de ABAP e de HANA; \n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\nCaso apare\u00e7a algum warning, basta clicar em Install \nAnyway\n;\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\nAp\u00f3s conclus\u00e3o da instala\u00e7\u00e3o, ser\u00e1 necess\u00e1rio reiniciar o Eclipse Oxygen;\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\nPara verificar se a instala\u00e7\u00e3o dos plugins ocorreu com sucesso, basta seguir os seguintes procedimentos:  \n\n\n\n\nAcesse o menu \nWindow>Perspective>Open Perspective>Other...\n;\n\n\n\n\n\u00a0\n\n\n\u00a0\n\n\n\n\nDever\u00e1 ter as duas perspectivas na lista de perspectivas, a de ABAP e a de HANA;",
+            "title": "Pr\u00e9-Requisitos"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#pre-requisitos",
+            "text": "",
+            "title": "Pr\u00e9-Requisitos"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#instalacao-do-sap-gui-75",
+            "text": "Durante o processo de instala\u00e7\u00e3o dos arquivos abaixo, atente-se \u00e0 vers\u00e3o do seu sistema operacional, se \u00e9 32 ou 64 bits.",
+            "title": "Instala\u00e7\u00e3o do SAP GUI 7.5"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#windows",
+            "text": "Baixar o SAP GUI 7.5 e os patchs mais recentes no SAP ONE Support (necess\u00e1rio S-User com permiss\u00e3o), ou baixar no link abaixo do Google Drive.   SAP GUI 7.5  Instale na ordem o SAP GUI 7.5, o \u00faltimo patch (Patch 6) e os hotfix liberados para o patch instalado (Patch 6 Hotfix 1).",
+            "title": "Windows"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#instalacao-do-java-8-jdk",
+            "text": "",
+            "title": "Instala\u00e7\u00e3o do JAVA 8 JDK"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#windows_1",
+            "text": "Acesse o site da Oracle e instale o  Java JDK 8  (instalar o update mais recente, desde que seja Java 8. Atentar ao fato que \u00e9 preciso instalar o JDK e n\u00e3o o JRE, e o Java precisa estar na vers\u00e3o 8 (vers\u00f5es anteriores n\u00e3o servem).  Ap\u00f3s a instala\u00e7\u00e3o, verifique se existe a vari\u00e1vel de sistema JAVA_HOME e se ela est\u00e1 apontando para o diret\u00f3rio de instala\u00e7\u00e3o do seu Java JDK.",
+            "title": "Windows"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#instalacao-do-eclipse",
+            "text": "Para instala\u00e7\u00e3o do Eclipse \u00e9 preciso ter o JAVA instalado previamente.",
+            "title": "Instala\u00e7\u00e3o do Eclipse"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#windows_2",
+            "text": "Acesse o site do  Eclipse  e fa\u00e7a download do  Eclipse Oxygen 4.7  Instale a op\u00e7\u00e3o \"Eclipse IDE for Java Developers\"",
+            "title": "Windows"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#instalacao-do-adt-abap-development-tools",
+            "text": "",
+            "title": "Instala\u00e7\u00e3o do ADT (ABAP Development Tools)"
+        },
+        {
+            "location": "/PreRequisitos/preRequisitos/#windows_3",
+            "text": "Os passos a seguir est\u00e3o descritos no site  SAP Development Tools ABAP  para instalar o plugin ADT (ABAP Development Tools) no Eclipse Oxygen.    Abra o Eclipse Oxygen;     V\u00e1 em  Help>Install New Software.. ;    \u00a0 \n\u00a0   Adicione o reposit\u00f3rio  https://tools.hana.ondemand.com/oxygen  e pressione  Enter ;   \u00a0   \n\u00a0   Marque as op\u00e7\u00f5es  ABAP Development Tools  e  SAP HANA Tools  e clique em  Next ;   \u00a0 \n\u00a0   Clique novamente em  Next , aceite os termos de licen\u00e7a e clique em  Finish ;   \u00a0  \n\u00a0   O Eclipse vai come\u00e7ar a baixar e instalar os Plugins de ABAP e de HANA;    \u00a0 \n\u00a0   Caso apare\u00e7a algum warning, basta clicar em Install  Anyway ;   \u00a0 \n\u00a0   Ap\u00f3s conclus\u00e3o da instala\u00e7\u00e3o, ser\u00e1 necess\u00e1rio reiniciar o Eclipse Oxygen;   \u00a0 \n\u00a0  Para verificar se a instala\u00e7\u00e3o dos plugins ocorreu com sucesso, basta seguir os seguintes procedimentos:     Acesse o menu  Window>Perspective>Open Perspective>Other... ;   \u00a0 \n\u00a0   Dever\u00e1 ter as duas perspectivas na lista de perspectivas, a de ABAP e a de HANA;",
+            "title": "Windows"
+        }
+    ]
+}

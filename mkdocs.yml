@@ -1,0 +1,22 @@
+#Project Information
+site_name: ABAP For HANA
+site_description: Treinamento de ABAP For HANA
+site_author: Matheus Goulart
+
+#Repository
+repo_name: treinamento.ABAPForHANA
+repo_url: https://github.com/matheusog/treinamento.ABAPForHANA.git
+
+#Customization
+extra_css: 
+  - css/extra.css
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+
+#Page Tree
+pages: 
+  - Home: 'index.md'
+  - Pré-Requisitos: 'PreRequisitos/preRequisitos.md' 
