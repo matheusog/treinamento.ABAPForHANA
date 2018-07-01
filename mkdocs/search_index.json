@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "ABAPForHANA\n\n\nMaterial de treinamento de ABAP For HANA",
+            "text": "ABAP For HANA\n\n\nMaterial de treinamento de ABAP For HANA\n\n\n\n\nPr\u00e9-Requisitos",
             "title": "Home"
         },
         {
-            "location": "/#abapforhana",
-            "text": "Material de treinamento de ABAP For HANA",
-            "title": "ABAPForHANA"
+            "location": "/#abap-for-hana",
+            "text": "Material de treinamento de ABAP For HANA   Pr\u00e9-Requisitos",
+            "title": "ABAP For HANA"
         },
         {
             "location": "/PreRequisitos/preRequisitos/",
