@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Matheus Goulart">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Pré-Requisitos - ABAP For HANA</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">ABAP For HANA</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="./">Pré-Requisitos</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/matheusog/treinamento.ABAPForHANA.git">treinamento.ABAPForHANA
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#pre-requisitos">Pré-Requisitos</a></li>
+            <li><a href="#instalacao-do-sap-gui-75">Instalação do SAP GUI 7.5</a></li>
+            <li><a href="#instalacao-do-eclipse">Instalação do Eclipse</a></li>
+            <li><a href="#instalacao-do-adt-abap-development-tools">Instalação do ADT (ABAP Development Tools)</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="pre-requisitos">Pré-Requisitos</h1>
+<p>&nbsp;</p>
+<h2 id="instalacao-do-sap-gui-75">Instalação do SAP GUI 7.5</h2>
+<p>&nbsp;</p>
+<p>Durante o processo de instalação dos arquivos abaixo, atente-se à versão do seu sistema operacional, se é 32 ou 64 bits. </p>
+<p>&nbsp;</p>
+<h3 id="windows">Windows</h3>
+<p>&nbsp;</p>
+<p>Baixar o SAP GUI 7.5 e os patchs mais recentes no SAP ONE Support (necessário S-User com permissão), ou baixar no link abaixo do Google Drive. </p>
+<p><a href="https://drive.google.com/open?id=12b8gWxzsrcRmfww4vUPuXFH4HIKw8LLy">SAP GUI 7.5</a></p>
+<p>Instale na ordem o SAP GUI 7.5, o último patch (Patch 6) e os hotfix liberados para o patch instalado (Patch 6 Hotfix 1). </p>
+<p>&nbsp;
+<img alt="SAP_GUI_01" class="center" src="../img/SAP_GUI/SAP_GUI_01.png" />
+&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="instalacao-do-java-8-jdk">Instalação do JAVA 8 JDK</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="windows_1">Windows</h3>
+<p>&nbsp;</p>
+<p>Acesse o site da Oracle e instale o <a href="http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html">Java JDK 8</a> (instalar o update mais recente, desde que seja Java 8. Atentar ao fato que é preciso instalar o JDK e não o JRE, e o Java precisa estar na versão 8 (versões anteriores não servem).</p>
+<p>Após a instalação, verifique se existe a variável de sistema JAVA_HOME e se ela está apontando para o diretório de instalação do seu Java JDK.</p>
+<p>&nbsp;
+<img alt="JAVA_00" class="center" src="../img/JAVA/JAVA_00.jpg" /></p>
+<p><img alt="JAVA_01" class="center" src="../img/JAVA/JAVA_01.png" /></p>
+<p><img alt="JAVA_02" class="center" src="../img/JAVA/JAVA_02.png" /></p>
+<p><img alt="JAVA_03" class="center" src="../img/JAVA/JAVA_03.png" />
+&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="instalacao-do-eclipse">Instalação do Eclipse</h2>
+<p>&nbsp;</p>
+<p>Para instalação do Eclipse é preciso ter o JAVA instalado previamente.</p>
+<p>&nbsp;</p>
+<h3 id="windows_2">Windows</h3>
+<p>&nbsp;</p>
+<p>Acesse o site do <a href="http://www.eclipse.org/oxygen/">Eclipse</a> e faça download do <a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-win64.exe">Eclipse Oxygen 4.7</a></p>
+<p>Instale a opção "Eclipse IDE for Java Developers"</p>
+<p>&nbsp;
+<img alt="Eclipse_01" class="center" src="../img/Eclipse/EclipseInstall_01.png" />
+&nbsp;</p>
+<p>&nbsp;</p>
+<h2 id="instalacao-do-adt-abap-development-tools">Instalação do ADT (ABAP Development Tools)</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 id="windows_3">Windows</h3>
+<p>&nbsp;</p>
+<p>Os passos a seguir estão descritos no site <a href="https://tools.hana.ondemand.com/#abap">SAP Development Tools ABAP</a> para instalar o plugin ADT (ABAP Development Tools) no Eclipse Oxygen.</p>
+<ul>
+<li>
+<p>Abra o Eclipse Oxygen; </p>
+</li>
+<li>
+<p>Vá em <em><strong>Help&gt;Install New Software..</strong></em>;</p>
+</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_01" class="center" src="../img/ADT/ADT_01.jpg" />
+&nbsp;</p>
+<ul>
+<li>Adicione o repositório <strong>https://tools.hana.ondemand.com/oxygen</strong> e pressione <strong>Enter</strong>;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_02" class="center" src="../img/ADT/ADT_02.jpg" /></p>
+<p><img alt="ADT_03" class="center" src="../img/ADT/ADT_03.jpg" /></p>
+<p><img alt="ADT_04" class="center" src="../img/ADT/ADT_04.jpg" />
+&nbsp;</p>
+<ul>
+<li>Marque as opções <strong>ABAP Development Tools</strong> e <strong>SAP HANA Tools</strong> e clique em <strong>Next</strong>;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_05" class="center" src="../img/ADT/ADT_05.jpg" />
+&nbsp;</p>
+<ul>
+<li>Clique novamente em <strong>Next</strong>, aceite os termos de licença e clique em <strong>Finish</strong>;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_06" class="center" src="../img/ADT/ADT_06.jpg" /></p>
+<p><img alt="ADT_07" class="center" src="../img/ADT/ADT_07.jpg" />
+&nbsp;</p>
+<ul>
+<li>O Eclipse vai começar a baixar e instalar os Plugins de ABAP e de HANA; </li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_08" class="center" src="../img/ADT/ADT_08.jpg" />
+&nbsp;</p>
+<ul>
+<li>Caso apareça algum warning, basta clicar em Install <strong>Anyway</strong>;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_09" class="center" src="../img/ADT/ADT_09.jpg" />
+&nbsp;</p>
+<ul>
+<li>Após conclusão da instalação, será necessário reiniciar o Eclipse Oxygen;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_10" class="center" src="../img/ADT/ADT_10.jpg" />
+&nbsp;</p>
+<p>Para verificar se a instalação dos plugins ocorreu com sucesso, basta seguir os seguintes procedimentos:  </p>
+<ul>
+<li>Acesse o menu <strong>Window&gt;Perspective&gt;Open Perspective&gt;Other...</strong>;</li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_11" class="center" src="../img/ADT/ADT_11.jpg" />
+&nbsp;</p>
+<ul>
+<li>Deverá ter as duas perspectivas na lista de perspectivas, a de ABAP e a de HANA; </li>
+</ul>
+<p>&nbsp;
+<img alt="ADT_12" class="center" src="../img/ADT/ADT_12.jpg" /></p>
+<p><img alt="ADT_13" class="center" src="../img/ADT/ADT_13.jpg" />
+&nbsp;</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
