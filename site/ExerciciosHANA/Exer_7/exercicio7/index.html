@@ -52,6 +52,9 @@
                     <li >
                         <a href="../../../PreRequisitos/preRequisitos/">Pré-Requisitos</a>
                     </li>
+                    <li >
+                        <a href="../../../FlightDataModel/flightModel/">Modelo de Dados</a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eclipse <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -143,6 +146,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#exercicio-7-hana">Exercício 7 - HANA</a></li>
             <li><a href="#contexto">Contexto</a></li>
+            <li><a href="#calculation-view">Calculation View</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -151,135 +155,210 @@
 <p>&nbsp;</p>
 <h2 id="contexto">Contexto</h2>
 <p>&nbsp;</p>
-<p>Criar uma view que traga dados de conexões (SPFLI) somente com dados de partida dos voos (omitir informações de chegada dos voos). 
+<p>Criar uma procedure que traga dados de conexões (SPFLI) com dados de partida e chegada dos voos. Mesma lógica do Exercício 3, porém fazendo todas as lógicas dentro da procedure (utilizar as views CA_EXER_1 e CA_EXER_2). 
 A view deve retornar as seguintes informações: </p>
 <p>&nbsp;</p>
 <table>
 <thead>
 <tr>
-<th>Key</th>
 <th>Campo</th>
+<th>Tipo de Dados</th>
 <th>Origem</th>
-<th>Hidden</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>X</strong></td>
 <td>CLIENT</td>
+<td>nvarchar(3)</td>
 <td>SPFLI-MANDT</td>
-<td></td>
 </tr>
 <tr>
-<td><strong>X</strong></td>
 <td>AIRCOMPANY_ID</td>
+<td>nvarchar(3)</td>
 <td>SPFLI-CARRID</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>COMPANY_NAME</td>
+<td>nvarchar(20)</td>
 <td>SCARR-CARRNAME</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>COMPANY_CURRENCY</td>
+<td>nvarchar(5)</td>
 <td>SCARR-CURRCODE</td>
-<td></td>
 </tr>
 <tr>
-<td><strong>X</strong></td>
 <td>CONNECTION_ID</td>
+<td>nvarchar(4)</td>
 <td>SPFLI-CONNID</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>DEPARTURE_COUNTRY</td>
+<td>nvarchar(3)</td>
 <td>SPFLI-COUNTRYFR</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>DEPARTURE_CITY</td>
+<td>nvarchar(20)</td>
 <td>SPFLI-CITYFROM</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>DEPARTURE_AIRPORT</td>
+<td>nvarchar(3)</td>
 <td>SPFLI-AIRPFROM</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>DEPARTURE_AIRPORT_NAME</td>
+<td>nvarchar(25)</td>
 <td>SAIRPORT-NAME</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>DEPARTURE_TIME</td>
+<td>nvarchar(6)</td>
 <td>SPFLI-DEPTIME</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
 <td>FLIGHT_TIME</td>
+<td>integer</td>
 <td>SPFLI-FLTIME</td>
-<td></td>
 </tr>
 <tr>
-<td></td>
-<td>FLIGHT_DISTANCE</td>
-<td>SPFLI-DISTANCE</td>
-<td></td>
+<td>ARRIVE_COUNTRY</td>
+<td>nvarchar(3)</td>
+<td>SPFLI-COUNTRYTO</td>
 </tr>
 <tr>
-<td></td>
-<td>FLIGHT_DISTANCE_UNIT</td>
-<td>SPFLI-DISTID</td>
-<td></td>
+<td>ARRIVE_CITY</td>
+<td>nvarchar(20)</td>
+<td>SPFLI-CITYTO</td>
 </tr>
 <tr>
-<td></td>
-<td>FLIGHT_TYPE</td>
-<td>SPFLI-FLTYPE</td>
-<td></td>
+<td>ARRIVE_AIRPORT</td>
+<td>nvarchar(3)</td>
+<td>SPFLI-AIRPTO</td>
 </tr>
 <tr>
-<td></td>
-<td>FLIGHT_DAYS</td>
-<td>SPFLI-PERIOD</td>
-<td><strong>X</strong></td>
+<td>ARRIVE_AIRPORT_NAME</td>
+<td>nvarchar(25)</td>
+<td>SAIRPORT-NAME</td>
+</tr>
+<tr>
+<td>ARRIVE_TIME</td>
+<td>nvarchar(6)</td>
+<td>SPFLI-ARRTIME</td>
+</tr>
+<tr>
+<td>DEPARTURE_TEXT</td>
+<td>nvarchar(100)</td>
+<td>Calculated Column</td>
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Calculated Column</th>
+<th>Valor</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEPARTURE_TEXT</td>
+<td>Concatenar campos DEPARTURE_COUNTRY + DEPARTURE_CITY + DEPARTURE_AIRPORT_NAME + DEPARTURE_TIME</td>
+<td>NVARCHAR(100)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2 id="calculation-view">Calculation View</h2>
+<p>&nbsp;</p>
+<p>Crie uma nova Stored Procedure:</p>
 <p>&nbsp;
 <img alt="ExerHANA_07_01" class="center" src="../../img/Exer_7/ExerHANA_07_01.jpg" />
 &nbsp;</p>
+<p>Crie como uma procedure do tipo <strong>XML (.procedure)</strong>, pois esse é o tipo de procedure que é suportado pelo ABAP. Caso a procedure não seja utilizada no ABAP, sempre crie como tipo Text <strong>(.hdbprocedure)</strong>:</p>
 <p>&nbsp;
-<img alt="ExerHANA_07_02" class="center" src="../../img/Exer_7/ExerHANA_07_02.jpg" />
+<img alt="ExerHANA_07_02" class="center" src="../../img/Exer_7/ExerHANA_07_02.jpg" /></p>
+<p><img alt="ExerHANA_07_03" class="center" src="../../img/Exer_7/ExerHANA_07_03.jpg" /></p>
+<p><img alt="ExerHANA_07_04" class="center" src="../../img/Exer_7/ExerHANA_07_04.jpg" />
 &nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_07_03" class="center" src="../../img/Exer_7/ExerHANA_07_03.jpg" />
-&nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_07_04" class="center" src="../../img/Exer_7/ExerHANA_07_04.jpg" />
-&nbsp;</p>
+<p>Crie o tipo de saída da procedure: </p>
+<pre><code>create type TT_FLIGHTS_DATA AS TABLE (
+    CLIENT                  nvarchar(3), 
+    AIRCOMPANY_ID           nvarchar(3), 
+    COMPANY_NAME            nvarchar(20),
+    COMPANY_CURRENCY        nvarchar(5),
+    CONNECTION_ID           nvarchar(4), 
+    DEPARTURE_COUNTRY       nvarchar(3),
+    DEPARTURE_CITY          nvarchar(20),
+    DEPARTURE_AIRPORT       nvarchar(3),
+    DEPARTURE_AIRPORT_NAME  nvarchar(25),
+    DEPARTURE_TIME          nvarchar(6),
+    FLIGHT_TIME             integer,
+    ARRIVE_COUNTRY          nvarchar(3),
+    ARRIVE_CITY             nvarchar(20),
+    ARRIVE_AIRPORT          nvarchar(3),
+    ARRIVE_AIRPORT_NAME     nvarchar(25),
+    ARRIVE_TIME             nvarchar(6),
+    DEPARTURE_TEXT          nvarchar(100)
+); 
+</code></pre>
+
 <p>&nbsp;
 <img alt="ExerHANA_07_05" class="center" src="../../img/Exer_7/ExerHANA_07_05.jpg" />
 &nbsp;</p>
+<p>Informe os parâmetros de saída:</p>
 <p>&nbsp;
 <img alt="ExerHANA_07_06" class="center" src="../../img/Exer_7/ExerHANA_07_06.jpg" />
 &nbsp;</p>
+<p>Faça a seleção dos dados utilizando as views do exercício 1 e 2:</p>
+<pre><code>  lt_flights = 
+    select 
+        departure_data.CLIENT                   ,
+        departure_data.AIRCOMPANY_ID            ,
+        departure_data.COMPANY_NAME             ,
+        departure_data.COMPANY_CURRENCY     ,
+        departure_data.CONNECTION_ID            ,
+        departure_data.DEPARTURE_COUNTRY        ,
+        departure_data.DEPARTURE_CITY           ,
+        departure_data.DEPARTURE_AIRPORT        ,
+        departure_data.DEPARTURE_AIRPORT_NAME   ,
+        departure_data.DEPARTURE_TIME           ,
+        departure_data.FLIGHT_TIME              ,       
+        arrive_data.COUNTRYTO   as ARRIVE_COUNTRY           ,
+        arrive_data.CITYTO      as ARRIVE_CITY              ,
+        arrive_data.AIRPTO      as ARRIVE_AIRPORT           ,
+        arrive_data.NAME        as ARRIVE_AIRPORT_NAME      ,
+        arrive_data.ARRTIME     as ARRIVE_TIME              ,       
+        concat( &quot;DEPARTURE_COUNTRY&quot;, concat( '/',
+            concat( &quot;DEPARTURE_CITY&quot;, concat( ' - ', 
+                concat( &quot;DEPARTURE_AIRPORT_NAME&quot;, concat( ' - ', 
+                    TO_NVARCHAR( to_time( &quot;DEPARTURE_TIME&quot; ) , 'HH:mm:SS' ) ) 
+        ) ) ) ) )               as DEPARTURE_TEXT
+
+            from &quot;mog.goulartm::CA_EXER_1&quot; as departure_data            
+            inner join &quot;mog.goulartm::CA_EXER_2&quot; as arrive_data
+                on  departure_data.CLIENT           = arrive_data.MANDT
+                and departure_data.AIRCOMPANY_ID    = arrive_data.CARRID
+                and departure_data.CONNECTION_ID    = arrive_data.CONNID
+
+                ;
+</code></pre>
+
 <p>&nbsp;
 <img alt="ExerHANA_07_07" class="center" src="../../img/Exer_7/ExerHANA_07_07.jpg" />
 &nbsp;</p>
+<p>Preencha a estrutura de saída:</p>
+<pre><code>    et_flights = 
+        select * from :lt_flights
+            where CLIENT = :iv_mandt ;  
+</code></pre>
+
 <p>&nbsp;
 <img alt="ExerHANA_07_08" class="center" src="../../img/Exer_7/ExerHANA_07_08.jpg" />
 &nbsp;</p>
+<p>Salve, ative e teste a procedure.</p>
 <p>&nbsp;
 <img alt="ExerHANA_07_09" class="center" src="../../img/Exer_7/ExerHANA_07_09.jpg" />
 &nbsp;</p></div>

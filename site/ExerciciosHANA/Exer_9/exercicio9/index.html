@@ -52,6 +52,9 @@
                     <li >
                         <a href="../../../PreRequisitos/preRequisitos/">Pré-Requisitos</a>
                     </li>
+                    <li >
+                        <a href="../../../FlightDataModel/flightModel/">Modelo de Dados</a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eclipse <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -143,6 +146,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#exercicio-9-hana">Exercício 9 - HANA</a></li>
             <li><a href="#contexto">Contexto</a></li>
+            <li><a href="#calculation-view">Calculation View</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -151,141 +155,80 @@
 <p>&nbsp;</p>
 <h2 id="contexto">Contexto</h2>
 <p>&nbsp;</p>
-<p>Criar uma view que traga dados de conexões (SPFLI) somente com dados de partida dos voos (omitir informações de chegada dos voos). 
-A view deve retornar as seguintes informações: </p>
+<p>Criar uma table function que traga dados de quantas vezes os aeroportos foram destinos de conexões (ARRIVE e DEPARTURE), tendo assim uma relação dos aeroportos com maior número de conexões.</p>
+<p>A view deve retornar as seguintes informações: </p>
 <p>&nbsp;</p>
 <table>
 <thead>
 <tr>
-<th>Key</th>
 <th>Campo</th>
 <th>Origem</th>
-<th>Hidden</th>
+<th>Tipo de Dados</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>X</strong></td>
 <td>CLIENT</td>
 <td>SPFLI-MANDT</td>
-<td></td>
+<td>nvarchar(3)</td>
 </tr>
 <tr>
-<td><strong>X</strong></td>
-<td>AIRCOMPANY_ID</td>
-<td>SPFLI-CARRID</td>
-<td></td>
+<td>AIRPORT</td>
+<td>SPFLI-AIRPFROM e SPFLI-AIRPTO (UNION)</td>
+<td>nvarchar(3)</td>
 </tr>
 <tr>
-<td></td>
-<td>COMPANY_NAME</td>
-<td>SCARR-CARRNAME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>COMPANY_CURRENCY</td>
-<td>SCARR-CURRCODE</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>X</strong></td>
-<td>CONNECTION_ID</td>
-<td>SPFLI-CONNID</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_COUNTRY</td>
-<td>SPFLI-COUNTRYFR</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_CITY</td>
-<td>SPFLI-CITYFROM</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_AIRPORT</td>
-<td>SPFLI-AIRPFROM</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_AIRPORT_NAME</td>
-<td>SAIRPORT-NAME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_TIME</td>
-<td>SPFLI-DEPTIME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_TIME</td>
-<td>SPFLI-FLTIME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DISTANCE</td>
-<td>SPFLI-DISTANCE</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DISTANCE_UNIT</td>
-<td>SPFLI-DISTID</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_TYPE</td>
-<td>SPFLI-FLTYPE</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DAYS</td>
-<td>SPFLI-PERIOD</td>
-<td><strong>X</strong></td>
+<td>NO_CONNECTIONS</td>
+<td>COUNT(*)</td>
+<td>integer</td>
 </tr>
 </tbody>
 </table>
+<p>&nbsp;</p>
+<h2 id="calculation-view">Calculation View</h2>
+<p>&nbsp;</p>
+<p>Crie uma table function:</p>
 <p>&nbsp;
-<img alt="ExerHANA_09_01" class="center" src="../../img/Exer_9/ExerHANA_09_01.jpg" />
+<img alt="ExerHANA_09_01" class="center" src="../../img/Exer_9/ExerHANA_09_01.jpg" /></p>
+<p><img alt="ExerHANA_09_02" class="center" src="../../img/Exer_9/ExerHANA_09_02.jpg" /></p>
+<p><img alt="ExerHANA_09_03" class="center" src="../../img/Exer_9/ExerHANA_09_03.jpg" />
 &nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_09_02" class="center" src="../../img/Exer_9/ExerHANA_09_02.jpg" />
-&nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_09_03" class="center" src="../../img/Exer_9/ExerHANA_09_03.jpg" />
-&nbsp;</p>
+<p>Defina a estrutura de <strong>Return</strong> da table function e os parâmetros de entrada:</p>
+<pre><code>FUNCTION &quot;_SYS_BIC&quot;.&quot;mog.goulartm::TF_EXER_9&quot; ( 
+    in  iv_mandt    nvarchar(3)
+) 
+
+RETURNS table (
+        CLIENT          nvarchar(3),
+        AIRPORT         nvarchar(3),
+        NO_CONNECTIONS  integer
+    )
+</code></pre>
+
 <p>&nbsp;
 <img alt="ExerHANA_09_04" class="center" src="../../img/Exer_9/ExerHANA_09_04.jpg" />
 &nbsp;</p>
+<p>Busque os dados de conexões na tabela <strong>SAPABAP1.SPFLI</strong>:</p>
 <p>&nbsp;
 <img alt="ExerHANA_09_05" class="center" src="../../img/Exer_9/ExerHANA_09_05.jpg" />
 &nbsp;</p>
+<p>Faça duas agregações, uma que mostre a quantidade de vezes que um aeroporto é utilizado como origem de uma conexão (departure), e outra que mostra a quantidade de vezes que um aeroporto  é utilizado como destino de uma conexão (arrive):</p>
 <p>&nbsp;
 <img alt="ExerHANA_09_06" class="center" src="../../img/Exer_9/ExerHANA_09_06.jpg" />
 &nbsp;</p>
+<p>Faça um union das duas agregações:</p>
 <p>&nbsp;
 <img alt="ExerHANA_09_07" class="center" src="../../img/Exer_9/ExerHANA_09_07.jpg" />
 &nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_09_08" class="center" src="../../img/Exer_9/ExerHANA_09_08.jpg" />
-&nbsp;</p>
-<p>&nbsp;
-<img alt="ExerHANA_09_09" class="center" src="../../img/Exer_9/ExerHANA_09_09.jpg" />
-&nbsp;</p>
+<p>Somar as utilizações por aeroporto: </p>
 <p>&nbsp;
 <img alt="ExerHANA_09_10" class="center" src="../../img/Exer_9/ExerHANA_09_10.jpg" />
 &nbsp;</p>
+<p>Faça o return da table function:</p>
+<p>&nbsp;
+<img alt="ExerHANA_09_08" class="center" src="../../img/Exer_9/ExerHANA_09_10.jpg" />
+&nbsp;</p>
+<p>Salve, ative e teste:</p>
 <p>&nbsp;
 <img alt="ExerHANA_09_11" class="center" src="../../img/Exer_9/ExerHANA_09_11.jpg" />
 &nbsp;</p></div>

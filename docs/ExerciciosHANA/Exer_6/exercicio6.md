@@ -4,7 +4,7 @@
 ## Contexto
 &nbsp;
 
-Criar uma view que traga dados de quantas vezes os aeroportos foram destinos de conexões (ARRIVE e DEPARTURE), tendo assim um número dos aeroportos com maior número de conexões.
+Criar uma view que traga dados de quantas vezes os aeroportos foram destinos de conexões (ARRIVE e DEPARTURE), tendo assim uma relação dos aeroportos com maior número de conexões.
 
 A view deve retornar as seguintes informações: 
 
