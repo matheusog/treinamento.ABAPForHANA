@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-07-01</lastmod>
+     <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,9 +12,89 @@
     
     <url>
      <loc>/PreRequisitos/preRequisitos/</loc>
-     <lastmod>2018-07-01</lastmod>
+     <lastmod>2018-07-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+        
+    <url>
+     <loc>/ExerciciosEclipse/Exer_1/exercicio1/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosEclipse/Exer_2/exercicio2/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_1/exercicio1/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_2/exercicio2/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_3/exercicio3/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_4/exercicio4/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_5/exercicio5/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_6/exercicio6/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_7/exercicio7/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_8/exercicio8/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_9/exercicio9/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ExerciciosHANA/Exer_10/exercicio10/</loc>
+     <lastmod>2018-07-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
