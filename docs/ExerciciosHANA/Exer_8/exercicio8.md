@@ -34,7 +34,7 @@ A view deve retornar as seguintes informações:
 | DEPARTURE_TEXT | Concatenar campos DEPARTURE_COUNTRY + DEPARTURE_CITY + DEPARTURE_AIRPORT_NAME + DEPARTURE_TIME | NVARCHAR(100) |
 
 &nbsp;
-## Calculation View
+## Procedure
 &nbsp;
 
 Crie uma nova Stored Procedure do tipo **Text** (.hdbprocedure):

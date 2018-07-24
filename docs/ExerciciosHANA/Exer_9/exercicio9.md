@@ -17,7 +17,7 @@ A view deve retornar as seguintes informações:
 | NO_CONNECTIONS | COUNT(*) | integer |
 
 &nbsp;
-## Calculation View
+## Table Function
 &nbsp;
 
 Crie uma table function:
