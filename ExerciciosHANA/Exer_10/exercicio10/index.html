@@ -113,6 +113,43 @@
 </li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ABAP <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_1/exercicio1/">Pacote</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_1_B/exercicio1_b/">Exercício 1</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_2/exercicio2/">Exercício 2</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_3/exercicio3/">Exercício 3</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_4/exercicio4/">Exercício 4</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_5/exercicio5/">Exercício 5</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_6/exercicio6/">Exercício 6</a>
+</li>
+                            
+<li >
+    <a href="../../../ExerciciosABAP/Exer_7/exercicio7/">Exercício 7</a>
+</li>
+                        </ul>
+                    </li>
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -126,8 +163,8 @@
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li class="disabled">
-                        <a rel="prev" >
+                    <li >
+                        <a rel="prev" href="../../../ExerciciosABAP/Exer_1/exercicio1/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -146,6 +183,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#exercicio-10-hana">Exercício 10 - HANA</a></li>
             <li><a href="#contexto">Contexto</a></li>
+            <li><a href="#calculation-view">Calculation View</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -154,111 +192,10 @@
 <p>&nbsp;</p>
 <h2 id="contexto">Contexto</h2>
 <p>&nbsp;</p>
-<p>Criar uma view que traga dados de conexões (SPFLI) somente com dados de partida dos voos (omitir informações de chegada dos voos). 
-A view deve retornar as seguintes informações: </p>
+<p>O intuito do exercício é compreender como funciona o CDS no HANA. </p>
 <p>&nbsp;</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Campo</th>
-<th>Origem</th>
-<th>Hidden</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>X</strong></td>
-<td>CLIENT</td>
-<td>SPFLI-MANDT</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>X</strong></td>
-<td>AIRCOMPANY_ID</td>
-<td>SPFLI-CARRID</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>COMPANY_NAME</td>
-<td>SCARR-CARRNAME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>COMPANY_CURRENCY</td>
-<td>SCARR-CURRCODE</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>X</strong></td>
-<td>CONNECTION_ID</td>
-<td>SPFLI-CONNID</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_COUNTRY</td>
-<td>SPFLI-COUNTRYFR</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_CITY</td>
-<td>SPFLI-CITYFROM</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_AIRPORT</td>
-<td>SPFLI-AIRPFROM</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_AIRPORT_NAME</td>
-<td>SAIRPORT-NAME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>DEPARTURE_TIME</td>
-<td>SPFLI-DEPTIME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_TIME</td>
-<td>SPFLI-FLTIME</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DISTANCE</td>
-<td>SPFLI-DISTANCE</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DISTANCE_UNIT</td>
-<td>SPFLI-DISTID</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_TYPE</td>
-<td>SPFLI-FLTYPE</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>FLIGHT_DAYS</td>
-<td>SPFLI-PERIOD</td>
-<td><strong>X</strong></td>
-</tr>
-</tbody>
-</table>
+<h2 id="calculation-view">Calculation View</h2>
+<p>&nbsp;</p>
 <p>&nbsp;
 <img alt="ExerHANA_10_01" class="center" src="../../img/Exer_10/ExerHANA_10_01.jpg" />
 &nbsp;</p>
